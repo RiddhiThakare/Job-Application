@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <title>Job Application</title>
+    
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #a1a1a1;
+    color: #000000;
+}
+
+#jobApplicationBox {
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    margin: 1px;
+    font-size: 24px;
+}
+
+#webTag {
+    font-size: 12px;
+}
+
+#leftColumn, #rightColumn {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+}
+
+#middleColumn {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, select, textarea {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    color: #060606;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="file"] {
+    border: 1px solid #000;
+    padding: 8px;
+}
+
+button {
+    padding: 8px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left:450px;
+    display: block;
+   
+    border-radius: 5px;
+    font-size: 14px;
+  
+}
+
+button:hover {
+    background-color: #cc0000;
+}
+    </style>
+    
+</head>
+<body>
+
+    <div id="jobApplicationBox">
+        <h2>Job Application <span id="webTag">(Web)</span></h2>
+
+        <div id="leftColumn">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Enter first name...." required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter email...." required>
+        </div>
+
+        <div id="rightColumn">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter last name...." required>
+
+            <label for="jobRole">Job Role</label>
+            <select id="jobRole" name="jobRole" required>
+                <option value="" disabled selected>Select a job role</option>
+                <option value="developer">Developer</option>
+                <option value="designer">Designer</option>
+                <option value="manager">Manager</option>
+            </select>
+        </div>
+        <label for="address">Address</label>
+        <div id="middleColumn">
+            
+            <textarea id="address" name="address" placeholder="Enter address...." required></textarea>
+        </div>
+
+        <div id="leftColumn">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="Enter city name...." required>
+
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+
+        <div id="rightColumn">
+            <label for="pincode">Pincode</label>
+            <input type="text" id="pincode" name="pincode" placeholder="Enter pincode...." required>
+
+            <label for="cv">Upload Your CV</label>
+            <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+        </div>
+
+        <button type="button" onclick="submitForm()">Apply Now</button>
+    </div>
+
+    <script src ="index.js"></script>
+   
+
+</body>
+</html>
+
